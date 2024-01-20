@@ -1,1 +1,1 @@
-# Function-in-Python
+# Function-in-Python (Beginner friendly)
