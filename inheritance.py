@@ -1,13 +1,30 @@
-class Car:
-    def __init__(self,brand,model,price):
-        self.brand = brand
-        self.model = model
-        self.price = price
+# Parent class
+class Person:
+    def __init__(self,firstName,lastName):
+        self.firstName = firstName
+        self.lastName = lastName
         
-    def details(self):
-        print(f"Brand: {self.brand}")
-        print(f"Model: {self.model}")
-        print(f"Price: ${self.price:,.2f}")
+    def introduce(self):
+        print(f'My name is {self.firstName} {self.lastName}.')  
         
-carOne = Car('Tesla','X',50000)
-carOne.details()
+# Child class
+class Student(Person):
+    def __init__(self,firstName,lastName,sectionYear):
+        super().__init__(firstName,lastName)
+        self.sectionYear = sectionYear
+        
+    def introduce(self):
+        print(f"Hi i am {self.firstName} {self.lastName} from {self.sectionYear}.")
+        # super().introduce()
+        
+class Employee(Person):
+    def __init__(self, firstName, lastName,position):
+        super().__init__(firstName,lastName)
+        self.position = position
+        
+    def introduce(self):
+        print(f"My name is {self.firstName} {self.lastName} and my position is {self.position}")
+
+        
+
+        
