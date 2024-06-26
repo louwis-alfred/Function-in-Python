@@ -10,4 +10,3 @@ while True:
 with open("names.txt", "w") as file:
     for index, name in enumerate(list_of_names, start=1):
         file.write(f"{index}. {name}\n")
-    file.close()
